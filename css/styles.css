@@ -12,7 +12,7 @@
 
 /* Flaired edges, by Tomas Theunissen */
 
-#team hr {
+hr {
   overflow: visible; /* For IE */
   height: 30px;
   border-style: solid;
@@ -23,7 +23,7 @@
   padding-left: 0 !important;
 }
 
-#team hr:before { /* Not really supposed to work, but does */
+hr:before { /* Not really supposed to work, but does */
   display: block;
   content: "";
   height: 30px;
@@ -38,7 +38,7 @@
   font-size: 2rem;
 }
 
-#team .lead {
+#team .lead, #about .lead {
   font-size: 1.5rem;
 }
 
@@ -51,4 +51,15 @@
     margin-left: 0.25rem;
     width: 100%;
   }
+}
+
+#about .display-4 {
+  font-size: 1.75rem;
+}
+
+section, .jumbotron {
+  position: relative; /* needed for footer positioning*/
+  height: auto !important; /* real browsers */
+  min-height: 100%; /* real browsers */
+  padding-top: 50px;
 }
