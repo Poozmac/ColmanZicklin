@@ -1,5 +1,6 @@
 #team .card {
   width: 18rem;
+  margin-right: auto !important;
 }
 
 #team .card img {
@@ -18,6 +19,8 @@
   border-color: black;
   border-width: 1px 0 0 0;
   border-radius: 20px;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
 }
 
 #team hr:before { /* Not really supposed to work, but does */
@@ -29,4 +32,23 @@
   border-color: black;
   border-width: 0 0 1px 0;
   border-radius: 20px;
+}
+
+.lead {
+  font-size: 2rem;
+}
+
+#team .lead {
+  font-size: 1.5rem;
+}
+
+#team-cards {
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  #team .card {
+    margin-left: 0.25rem;
+    width: 100%;
+  }
 }
