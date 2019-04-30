@@ -1,3 +1,7 @@
+#team .bg-light {
+  background-color: white !important;
+}
+
 #team .card {
   width: 18rem;
   margin-right: auto !important;
@@ -16,7 +20,7 @@ hr {
   overflow: visible; /* For IE */
   height: 30px;
   border-style: solid;
-  border-color: black;
+  border-color: white;
   border-width: 1px 0 0 0;
   border-radius: 20px;
   padding-right: 0 !important;
@@ -29,9 +33,13 @@ hr:before { /* Not really supposed to work, but does */
   height: 30px;
   margin-top: -31px;
   border-style: solid;
-  border-color: black;
+  border-color: white;
   border-width: 0 0 1px 0;
   border-radius: 20px;
+}
+
+#team hr, #team hr:before {
+  border-color: black;
 }
 
 .lead {
@@ -51,6 +59,10 @@ hr:before { /* Not really supposed to work, but does */
     margin-left: 0.25rem;
     width: 100%;
   }
+
+  html {
+    width: fit-content;
+  }
 }
 
 #about .display-4 {
@@ -62,4 +74,7 @@ section, .jumbotron {
   height: auto !important; /* real browsers */
   min-height: 100%; /* real browsers */
   padding-top: 50px;
+}
+body {
+  background: #0C1D39
 }
