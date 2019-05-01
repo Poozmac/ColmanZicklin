@@ -118,10 +118,30 @@ nav .nav-item, nav .nav-item:focus, nav .nav-item:hover, nav .nav-item a:hover, 
 }
 
 .jumbotron {
+  background: transparent;
+  padding: 20%;
+}
+
+.jumbotron::after {
+  content: "";
   background: url("../imgs/BusinessBackground.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  padding: 20%;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.display-1, header .lead {
+  /* font-weight: bold; */
+  color: whitesmoke;
+  text-shadow: -2px -2px 3px rgba(0, 0, 0, 0.9),
+              2px 2px 3px rgba(0, 0, 0, .6),
+              6px 6px 3px rgba(0, 0, 0, .3);
 }
