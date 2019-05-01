@@ -14,7 +14,7 @@
 
 #team .card img {
   width: 155px;
-  max-height: 260px;
+  max-height: 155px;
   object-fit: cover;
   margin: auto;
   border-radius: 10%;
@@ -76,11 +76,11 @@ hr:before { /* Not really supposed to work, but does */
   }
 }
 
-#about .display-4 {
+#about .display-5 {
   font-size: 1.75rem;
 }
 
-section, .jumbotron {
+section {
   position: relative; /* needed for footer positioning*/
   height: auto !important; /* real browsers */
   min-height: 100%; /* real browsers */
@@ -101,4 +101,27 @@ nav .nav-item, nav .nav-item:focus, nav .nav-item:hover, nav .nav-item a:hover, 
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
+}
+
+.about-explain {
+  border-top: 1px solid rgba(58, 73, 97, 1);
+  border-bottom: 1px solid rgba(58, 73, 97, 1);
+}
+
+.about-explain p {
+  font-size: 1.25rem;
+}
+
+.display-4 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.jumbotron {
+  background: url("../imgs/BusinessBackground.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 20%;
 }
