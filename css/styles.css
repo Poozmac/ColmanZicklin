@@ -1,10 +1,15 @@
 #team .bg-light {
   background-color: white !important;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 #team .card {
   width: 18rem;
   margin-right: auto !important;
+  padding: 15px;
+  border-radius: 20px;
+  /* border: 0; */
 }
 
 #team .card img {
@@ -12,6 +17,12 @@
   max-height: 260px;
   object-fit: cover;
   margin: auto;
+  border-radius: 10%;
+}
+
+#team .card:hover {
+  box-shadow: -2px -2px 3px rgba(255, 255, 255, .6),
+              2px 2px 3px rgba(0, 0, 0, .6);
 }
 
 /* Flaired edges, by Tomas Theunissen */
@@ -77,4 +88,17 @@ section, .jumbotron {
 }
 body {
   background: #0C1D39
+}
+
+nav .nav-item, nav .nav-item:focus, nav .nav-item:hover, nav .nav-item a:hover, nav button, nav button:hover, nav button:active, nav button:focus, nav button:visited {
+  text-decoration: none !important;
+  background: transparent;
+  border: 0;
+  outline: 0;
+}
+
+#contact .row {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
 }

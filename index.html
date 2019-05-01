@@ -12,7 +12,7 @@
   <header id="home">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">C-Z 19</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -38,7 +38,9 @@
               <a class="nav-link" href="#zicklin">Zicklin</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+              <a href="#">
+                <button class="nav-link" data-toggle="modal" data-target="#contact-modal">Contact</button>
+              </a>
             </li>
           </ul>
         </div>
@@ -215,14 +217,6 @@
       </div>
       <!---->
       <div class="container">
-        <div class="row justify-content-between my-5">
-          <div class="col-md-6">
-            <img src="./imgs/Collman.webp" alt="Collman logo" >
-          </div>
-          <div class="col-md-6">
-            <img src="./imgs/Zicklin.webp" alt="Zicklin logo" >
-          </div>
-        </div>
         <div class="row my-5">
           <div class="col">
             <p class="display-4">
@@ -230,6 +224,14 @@
               We take part in a dual Master Degree program that credits us with MBA & MS.C Entrepreneurship.<br>
               Our purpose is to explore NY ecosystem, Find partnership opportunities and help to enlarge the Israel Innovation Ecosystem.
             </p>
+          </div>
+        </div>
+        <div class="row justify-content-between my-5">
+          <div class="col-md-6">
+            <img src="./imgs/Collman.webp" alt="Collman logo" >
+          </div>
+          <div class="col-md-6">
+            <img src="./imgs/Zicklin.webp" alt="Zicklin logo" >
           </div>
         </div>
       </div>
@@ -287,7 +289,69 @@
   </section>
 
   <section id="contact">
-
+    <div id="contact-modal"class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="contact" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <!--Section heading-->
+          <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+          <!--Section description-->
+          <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly.</p>
+          <div class="row">
+              <!--Grid column-->
+              <div class="col-md-9 mb-md-0 mb-5">
+                  <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                      <!--Grid row-->
+                      <div class="row">
+                          <!--Grid column-->
+                          <div class="col-md-6">
+                              <div class="md-form mb-0">
+                                  <input type="text" id="name" name="name" class="form-control">
+                                  <label for="name" class="">Your name</label>
+                              </div>
+                          </div>
+                          <!--Grid column-->
+                          <!--Grid column-->
+                          <div class="col-md-6">
+                              <div class="md-form mb-0">
+                                  <input type="text" id="email" name="email" class="form-control">
+                                  <label for="email" class="">Your email</label>
+                              </div>
+                          </div>
+                          <!--Grid column-->
+                      </div>
+                      <!--Grid row-->
+                      <!--Grid row-->
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="md-form mb-0">
+                                  <input type="text" id="subject" name="subject" class="form-control">
+                                  <label for="subject" class="">Subject</label>
+                              </div>
+                          </div>
+                      </div>
+                      <!--Grid row-->
+                      <!--Grid row-->
+                      <div class="row">
+                          <!--Grid column-->
+                          <div class="col-md-12">
+                              <div class="md-form">
+                                  <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                  <label for="message">Your message</label>
+                              </div>
+                          </div>
+                      </div>
+                      <!--Grid row-->
+                  </form>
+                  <div class="text-center text-md-left">
+                      <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+                  </div>
+                  <div class="status"></div>
+              </div>
+              <!--Grid column-->
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
