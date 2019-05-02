@@ -123,7 +123,7 @@ nav .nav-item, nav .nav-item:focus, nav .nav-item:hover, nav .nav-item a:hover, 
 
 .jumbotron {
   background: transparent;
-  padding: 20%;
+  padding: 15% 0;
 }
 
 .jumbotron::after {
