@@ -123,7 +123,7 @@ nav .nav-item, nav .nav-item:focus, nav .nav-item:hover, nav .nav-item a:hover, 
 
 .jumbotron {
   background: transparent;
-  padding: 15% 0;
+  height: 100vh;
 }
 
 .jumbotron::after {
@@ -142,6 +142,14 @@ nav .nav-item, nav .nav-item:focus, nav .nav-item:hover, nav .nav-item a:hover, 
   z-index: -1;
 }
 
+.jumbotron .container {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .display-1, header .lead {
   /* font-weight: bold; */
   color: whitesmoke;
@@ -151,7 +159,7 @@ nav .nav-item, nav .nav-item:focus, nav .nav-item:hover, nav .nav-item a:hover, 
 }
 
 #partners {
-  background-color: #D100E0;
+  background-color: #2196F3;
   padding: 20px;
 }
 

@@ -224,6 +224,8 @@
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+  filter: gray;
+  filter: grayscale(100%);
 }
 .material-card.mc-active .img-container {
   -webkit-border-radius: 50%;
@@ -236,7 +238,8 @@
   z-index: 20;
 }
 .img-responsive{
-    max-width: 100%;
+  width: 194px;
+  height: 323px;
 }
 .material-card.mc-active .mc-content {
   padding-top: 5.6em;
