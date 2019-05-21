@@ -390,7 +390,7 @@
                 </div>
               </div>
             </form>
-            <a id="send_email" class="waves-effect waves-light btn-large black homepage-buttons button-text center modal-trigger" href="https://collman-zicklin.com/"> Send email </a>
+            <a id="send_email" class="waves-effect waves-light btn-large black homepage-buttons button-text center modal-trigger" href="#modal1"> Send email </a>
 
             <!-- Message Sent Modal Structure -->
             <div id="modal1" class="modal modal-fixed-footer thank-you-modal">
@@ -416,24 +416,40 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
   <script>
     $(document).ready(function () {
-      var user, to, subject, text;
-      $("#send_email").click(function () {
+      $("#send_email").click(function (e) {
         // enter your email account that you want to recieve emails at.
-        to = "yalfasi6@gmail.com";
-        name = $("#name").val();
-        user = $("#user_email").val();
-        text = $("#textarea1").val();
-        $("#message").text("Sending E-mail...Please wait");
-        $.get("http://collman-zicklin.com/send", {
-          to: to,
-          name: name,
-          user: user,
-          text: text
-        }, function (data) {
-          if (data == "sent") {
-            $("#message").text("Email sent");
-          }
-        });
+        var to = "yalfasi6@gmail.com";
+        var name = $("#name").val();
+        var user = $("#user_email").val();
+        var text = $("#textarea1").val();
+		if( !name.value || !user.value || !text.value )
+		{
+			alertify.error( 'Please check your entries')
+		}
+		else
+		{
+			$.ajax({
+				url: "https://formspree.io/yalfasi6@gmail.com",
+				method: "POST",
+				data: $(this).serialize(),
+				dataType: "jason"
+			});
+			
+			e.preventDefault()
+			$(this).get(0).reset()
+			alertify.sucesses('Message sent')
+		}
+        //$("#message").text("Sending E-mail...Please wait");
+        //$.get("http://localhost:3000/send", {
+       //   to: to,
+        //  name: name,
+        //  user: user,
+        //  text: text
+        //}, function (data) {
+         // if (data == "sent") {
+         //   $("#message").text("Email sent");
+         // }
+       // });
       });
     });
   </script>
