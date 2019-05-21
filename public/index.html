@@ -390,7 +390,7 @@
                 </div>
               </div>
             </form>
-            <a id="send_email" class="waves-effect waves-light btn-large black homepage-buttons button-text center modal-trigger" href="#"> Send email </a>
+            <a id="send_email" class="waves-effect waves-light btn-large black homepage-buttons button-text center modal-trigger" href="https://collman-zicklin.com/"> Send email </a>
 
             <!-- Message Sent Modal Structure -->
             <div id="modal1" class="modal modal-fixed-footer thank-you-modal">
@@ -424,7 +424,7 @@
         user = $("#user_email").val();
         text = $("#textarea1").val();
         $("#message").text("Sending E-mail...Please wait");
-        $.get("http://localhost:8080/send", {
+        $.get("http://collman-zicklin.com/send", {
           to: to,
           name: name,
           user: user,
