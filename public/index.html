@@ -422,23 +422,18 @@
         var name = $("#name").val();
         var user = $("#user_email").val();
         var text = $("#textarea1").val();
-		if( !name.value || !user.value || !text.value )
-		{
-			alertify.error( 'Please check your entries')
-		}
-		else
-		{
-			$.ajax({
-				url: "https://formspree.io/yalfasi6@gmail.com",
-				method: "POST",
-				data: $(this).serialize(),
-				dataType: "jason"
-			});
-			
-			e.preventDefault()
-			$(this).get(0).reset()
-			alertify.sucesses('Message sent')
-		}
+		
+		$.ajax({
+			url: "https://formspree.io/yalfasi6@gmail.com",
+			method: "POST",
+			data: $(this).serialize(),
+			dataType: "jason"
+		});
+		
+		e.preventDefault()
+		$(this).get(0).reset()
+		alertify.sucesses('Message sent')
+		
         //$("#message").text("Sending E-mail...Please wait");
         //$.get("http://localhost:3000/send", {
        //   to: to,
